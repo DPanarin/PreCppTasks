@@ -51,6 +51,84 @@ int main()
 //    }
 //    return 0;
 //}
+//{
+//    int floorNumber;
+//    int truePassword = 1337;
+//    int userEnteredPassword;
+//    cout << "Enter the floor number, please: ";
+//    cin >> floorNumber;
+//
+//    switch (floorNumber)
+//    {
+//        case 1:
+//        case 2:
+//        case 3:
+//        case 7:
+//        case 8:
+//        case 9:
+//            cout << "Ok";
+//            break;
+//        case 4:
+//        case 5:
+//        case 6:
+//            {
+//                cout << "Restricted area, please enter the password: ";
+//                cin >> userEnteredPassword;
+//                if (userEnteredPassword == truePassword)
+//                    {
+//                      cout << "Ok";
+//                    }
+//                else
+//                    {
+//                     cout << "Wrong password!";
+//                    }
+//            break;
+//            }
+//        default:
+//            cout << "Wrong floor";
+//            break;
+//    return 0;
+//    }
+//}
+//{
+//    int bag1, bag2, bag3 ,bag4, bag5, numberOfHeavyBags = 0;
+//    cout << "Enter weight of first bag: ";
+//    cin >> bag1;
+//    cout << "Enter weight of second bag: ";
+//    cin >> bag2;
+//    cout << "Enter weight of third bag: ";
+//    cin >> bag3;
+//    cout << "Enter weight of fourth bag: ";
+//    cin >> bag4;
+//    cout << "Enter weight of fifth bag: ";
+//    cin >> bag5;
+//    if  (bag1 > 20)
+//        numberOfHeavyBags++;
+//    if  (bag2 > 20)
+//        numberOfHeavyBags++;
+//    if  (bag3 > 20)
+//        numberOfHeavyBags++;
+//    if  (bag4 > 20)
+//        numberOfHeavyBags++;
+//    if  (bag5 > 20)
+//        numberOfHeavyBags++;
+//    cout << "Total number of heavy bags: " << numberOfHeavyBags;
+//    return 0;
+//}
+//{
+//    int numberOfStars;
+//    cout << "How many stars do you want to print: ";
+//    cin >> numberOfStars;
+//    for (int i = 0; i < numberOfStars; i++)
+//        cout << "*" << endl;
+//    int counter = 0;
+//    while (counter < numberOfStars)
+//    {
+//        cout << "*";
+//        counter++;
+//    }
+//    return 0;
+//}
 {
 
 }
