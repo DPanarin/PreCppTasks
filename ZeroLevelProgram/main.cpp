@@ -129,6 +129,75 @@ int main()
 //    }
 //    return 0;
 //}
-{
-
-}
+//{
+//    int userNumber;
+//    cout << "Enter the number: ";
+//    cin >> userNumber;
+//    for (int counter = 1; counter < userNumber; counter+=1)
+//        cout << counter << ", ";
+//    cout << userNumber;
+//    return 0;
+//}
+//{
+//    int userNumber;
+//    cout << "Enter the number: ";
+//    cin >> userNumber;
+//    for (int counter = userNumber; counter > 1; counter-=1)
+//        cout << counter << ", ";
+//    cout << "1";
+//    return 0;
+//}
+//{
+//    int userNumber;
+//    cout << "Enter the number: ";
+//    cin >> userNumber;
+//    for (int counter = 2; counter < userNumber; counter+=2)
+//        cout << counter << " ";
+//    if (userNumber %  2 == 0)
+//        cout << userNumber;
+//    return 0;
+//}
+// task 13
+//{
+//    int sizeOfSquare;
+//    cout << "Enter size of sqare: ";
+//    cin >> sizeOfSquare;
+//    for (int i = 1; i <= sizeOfSquare; i++)
+//    {
+//        for (int i = 1; i <= sizeOfSquare; i++)
+//        {
+//        cout << "*";
+//        }
+//    cout << endl;
+//    }
+//    return 0;
+//}
+// task 14
+//{
+//    int sizeOfTriangle;
+//    cout << "Enter size of triangle: ";
+//    cin >> sizeOfTriangle;
+//    for (int i = 1; i <= sizeOfTriangle; i++)
+//    {
+//        for (int j = 1; j <= i; j++)
+//        {
+//        cout << "*";
+//        }
+//    cout << endl;
+//    }
+//    return 0;
+//}
+//{
+//    int sizeOfTriangle;
+//    cout << "Enter size of triangle: ";
+//    cin >> sizeOfTriangle;
+//    for (int i = sizeOfTriangle; i >= 1; i--)
+//    {
+//        for (int j = 1; j <= i; j++)
+//        {
+//        cout << "*";
+//        }
+//    cout << endl;
+//    }
+//    return 0;
+//}
