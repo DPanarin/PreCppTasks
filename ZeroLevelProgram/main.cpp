@@ -238,7 +238,7 @@ int main()
 //    cout << "The sum of all numbers from 1 to your number is: " << sumOfNumbers << endl;
 //    return 0;
 //}
-// Task 16a
+//  Task 16a
 {
     int number, sumOfNumbers = 0;
     cout << "Enter the number: ";
