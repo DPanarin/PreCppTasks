@@ -201,3 +201,28 @@ int main()
 //    }
 //    return 0;
 //}
+{
+    int sizeOfChristmasTree;
+    cout << "Enter size of ChristmasTree: ";
+    cin >> sizeOfChristmasTree;
+    int numberOfSpacesInRow = sizeOfChristmasTree;
+    for (int i = 1; i <= sizeOfChristmasTree-1; i++)
+    {
+        numberOfSpacesInRow--;
+        for (int k = numberOfSpacesInRow; k >= 0; k--)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i*2 - 1; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int k = sizeOfChristmasTree-1; k >= 0; k--)
+        {
+            cout << " ";
+        }
+    cout << "*";
+    return 0;
+}
