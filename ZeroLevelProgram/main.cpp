@@ -201,28 +201,55 @@ int main()
 //    }
 //    return 0;
 //}
+// Task 15
+//{
+//    int sizeOfChristmasTree;
+//    cout << "Enter size of ChristmasTree: ";
+//    cin >> sizeOfChristmasTree;
+//    int numberOfSpacesInRow = sizeOfChristmasTree;
+//    for (int i = 1; i <= sizeOfChristmasTree-1; i++)
+//    {
+//        numberOfSpacesInRow--;
+//        for (int k = numberOfSpacesInRow; k >= 0; k--)
+//        {
+//            cout << " ";
+//        }
+//        for (int j = 1; j <= i*2 - 1; j++)
+//        {
+//            cout << "*";
+//        }
+//        cout << endl;
+//    }
+//    for (int k = sizeOfChristmasTree-1; k >= 0; k--)
+//        {
+//            cout << " ";
+//        }
+//    cout << "*";
+//    return 0;
+//}
+// Task 16
+//{
+//    int maxNumber, sumOfNumbers;
+//    cout << "Enter the number: ";
+//    cin >> maxNumber;
+//// This is a formula called the triangular number, https://en.wikipedia.org/wiki/Triangular_number
+//// I checked it manually a few times and I convinced that it is correct so I do not calculate this number in a loop
+//    sumOfNumbers = (maxNumber*(maxNumber + 1))/2;
+//    cout << "The sum of all numbers from 1 to your number is: " << sumOfNumbers << endl;
+//    return 0;
+//}
+// Task 16a
 {
-    int sizeOfChristmasTree;
-    cout << "Enter size of ChristmasTree: ";
-    cin >> sizeOfChristmasTree;
-    int numberOfSpacesInRow = sizeOfChristmasTree;
-    for (int i = 1; i <= sizeOfChristmasTree-1; i++)
+    int number, sumOfNumbers = 0;
+    cout << "Enter the number: ";
+    cin >> number;
+    while (number != 0)
     {
-        numberOfSpacesInRow--;
-        for (int k = numberOfSpacesInRow; k >= 0; k--)
-        {
-            cout << " ";
-        }
-        for (int j = 1; j <= i*2 - 1; j++)
-        {
-            cout << "*";
-        }
-        cout << endl;
+        sumOfNumbers = sumOfNumbers + number;
+        cout << "Enter the number or enter '0' to stop entering: ";
+        cin >> number;
     }
-    for (int k = sizeOfChristmasTree-1; k >= 0; k--)
-        {
-            cout << " ";
-        }
-    cout << "*";
+    cout << "Sum of your numbers is: " << sumOfNumbers << endl;
     return 0;
+
 }
