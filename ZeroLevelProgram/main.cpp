@@ -51,45 +51,53 @@ int main()
 //    }
 //    return 0;
 //}
-//{
-//    int floorNumber;
-//    int truePassword = 1337;
-//    int userEnteredPassword;
-//    cout << "Enter the floor number, please: ";
-//    cin >> floorNumber;
-//
-//    switch (floorNumber)
-//    {
-//        case 1:
-//        case 2:
-//        case 3:
-//        case 7:
-//        case 8:
-//        case 9:
-//            cout << "Ok";
-//            break;
-//        case 4:
-//        case 5:
-//        case 6:
-//            {
-//                cout << "Restricted area, please enter the password: ";
-//                cin >> userEnteredPassword;
-//                if (userEnteredPassword == truePassword)
-//                    {
-//                      cout << "Ok";
-//                    }
-//                else
-//                    {
-//                     cout << "Wrong password!";
-//                    }
-//            break;
-//            }
-//        default:
-//            cout << "Wrong floor";
-//            break;
-//    return 0;
-//    }
-//}
+// Task 8, 18
+{
+    int floorNumber;
+    int truePassword = 1337;
+    int userEnteredPassword;
+    cout << "Enter the floor number, please: ";
+    cin >> floorNumber;
+    if (floorNumber < 1 || floorNumber > 9)
+        {
+            while (floorNumber < 1 || floorNumber > 9)
+        {
+            cout << "Enter correct floor number, please!: ";
+            cin >> floorNumber;
+        }
+        }
+    switch (floorNumber)
+    {
+        case 1:
+        case 2:
+        case 3:
+        case 7:
+        case 8:
+        case 9:
+            cout << "Ok";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            {
+                cout << "Restricted area, please enter the password: ";
+                cin >> userEnteredPassword;
+                if (userEnteredPassword == truePassword)
+                    {
+                      cout << "Ok";
+                    }
+                else
+                    {
+                     cout << "Wrong password!";
+                    }
+            break;
+            }
+        default:
+            cout << "Wrong floor";
+            break;
+    return 0;
+    }
+}
 //{
 //    int bag1, bag2, bag3 ,bag4, bag5, numberOfHeavyBags = 0;
 //    cout << "Enter weight of first bag: ";
@@ -271,19 +279,19 @@ int main()
 //        return 0;
 //}
 // Task 17a
-{
-    int number, maxEvenNumber = 0;
-        cout << "Enter the number: ";
-        cin >> number;
-        while (number != 0)
-        {
-            if ((number > maxEvenNumber) && (number % 2 == 0))
-            {
-                maxEvenNumber = number;
-            }
-            cout << "Enter the number or enter '0' to stop entering: ";
-            cin >> number;
-        }
-        cout << "Max even number is: " << maxEvenNumber << endl;
-        return 0;
-}
+//{
+//    int number, maxEvenNumber = 0;
+//        cout << "Enter the number: ";
+//        cin >> number;
+//        while (number != 0)
+//        {
+//            if ((number > maxEvenNumber) && (number % 2 == 0))
+//            {
+//                maxEvenNumber = number;
+//            }
+//            cout << "Enter the number or enter '0' to stop entering: ";
+//            cin >> number;
+//        }
+//        cout << "Max even number is: " << maxEvenNumber << endl;
+//        return 0;
+//}
