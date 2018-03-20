@@ -239,17 +239,51 @@ int main()
 //    return 0;
 //}
 //  Task 16a
+//{
+//    int number, sumOfNumbers = 0;
+//    cout << "Enter the number: ";
+//    cin >> number;
+//    while (number != 0)
+//    {
+//        sumOfNumbers = sumOfNumbers + number;
+//        cout << "Enter the number or enter '0' to stop entering: ";
+//        cin >> number;
+//    }
+//    cout << "Sum of your numbers is: " << sumOfNumbers << endl;
+//    return 0;
+//
+//}
+// Task 17
+//{
+//    int number, maxNumber = 0;
+//        cout << "Enter the number: ";
+//        cin >> number;
+//        while (number != 0)
+//        {
+//            if (number > maxNumber)
+//            {
+//                maxNumber = number;
+//            }
+//            cout << "Enter the number or enter '0' to stop entering: ";
+//            cin >> number;
+//        }
+//        cout << "Max number is: " << maxNumber << endl;
+//        return 0;
+//}
+// Task 17a
 {
-    int number, sumOfNumbers = 0;
-    cout << "Enter the number: ";
-    cin >> number;
-    while (number != 0)
-    {
-        sumOfNumbers = sumOfNumbers + number;
-        cout << "Enter the number or enter '0' to stop entering: ";
+    int number, maxEvenNumber = 0;
+        cout << "Enter the number: ";
         cin >> number;
-    }
-    cout << "Sum of your numbers is: " << sumOfNumbers << endl;
-    return 0;
-
+        while (number != 0)
+        {
+            if ((number > maxEvenNumber) && (number % 2 == 0))
+            {
+                maxEvenNumber = number;
+            }
+            cout << "Enter the number or enter '0' to stop entering: ";
+            cin >> number;
+        }
+        cout << "Max even number is: " << maxEvenNumber << endl;
+        return 0;
 }
