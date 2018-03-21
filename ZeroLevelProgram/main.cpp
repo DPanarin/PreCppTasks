@@ -1,7 +1,6 @@
 // Hello. This is the program I wrote for the preparation for the entrance exam.
-// This program consists of separate functions for each of the 30 tasks that are described in the p2p-zero file.
-// You may call any of them by writing it number from the command line. Enjoy.
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
@@ -52,52 +51,52 @@ int main()
 //    return 0;
 //}
 // Task 8, 18
-{
-    int floorNumber;
-    int truePassword = 1337;
-    int userEnteredPassword;
-    cout << "Enter the floor number, please: ";
-    cin >> floorNumber;
-    if (floorNumber < 1 || floorNumber > 9)
-        {
-            while (floorNumber < 1 || floorNumber > 9)
-        {
-            cout << "Enter correct floor number, please!: ";
-            cin >> floorNumber;
-        }
-        }
-    switch (floorNumber)
-    {
-        case 1:
-        case 2:
-        case 3:
-        case 7:
-        case 8:
-        case 9:
-            cout << "Ok";
-            break;
-        case 4:
-        case 5:
-        case 6:
-            {
-                cout << "Restricted area, please enter the password: ";
-                cin >> userEnteredPassword;
-                if (userEnteredPassword == truePassword)
-                    {
-                      cout << "Ok";
-                    }
-                else
-                    {
-                     cout << "Wrong password!";
-                    }
-            break;
-            }
-        default:
-            cout << "Wrong floor";
-            break;
-    return 0;
-    }
-}
+//{
+//    int floorNumber;
+//    int truePassword = 1337;
+//    int userEnteredPassword;
+//    cout << "Enter the floor number, please: ";
+//    cin >> floorNumber;
+//    if (floorNumber < 1 || floorNumber > 9)
+//        {
+//            while (floorNumber < 1 || floorNumber > 9)
+//        {
+//            cout << "Enter correct floor number, please!: ";
+//            cin >> floorNumber;
+//        }
+//        }
+//    switch (floorNumber)
+//    {
+//        case 1:
+//        case 2:
+//        case 3:
+//        case 7:
+//        case 8:
+//        case 9:
+//            cout << "Ok";
+//            break;
+//        case 4:
+//        case 5:
+//        case 6:
+//            {
+//                cout << "Restricted area, please enter the password: ";
+//                cin >> userEnteredPassword;
+//                if (userEnteredPassword == truePassword)
+//                    {
+//                      cout << "Ok";
+//                    }
+//                else
+//                    {
+//                     cout << "Wrong password!";
+//                    }
+//            break;
+//            }
+//        default:
+//            cout << "Wrong floor";
+//            break;
+//    return 0;
+//    }
+//}
 //{
 //    int bag1, bag2, bag3 ,bag4, bag5, numberOfHeavyBags = 0;
 //    cout << "Enter weight of first bag: ";
@@ -123,6 +122,7 @@ int main()
 //    cout << "Total number of heavy bags: " << numberOfHeavyBags;
 //    return 0;
 //}
+// Task 12
 //{
 //    int numberOfStars;
 //    cout << "How many stars do you want to print: ";
@@ -137,6 +137,7 @@ int main()
 //    }
 //    return 0;
 //}
+//
 //{
 //    int userNumber;
 //    cout << "Enter the number: ";
@@ -295,3 +296,81 @@ int main()
 //        cout << "Max even number is: " << maxEvenNumber << endl;
 //        return 0;
 //}
+// Task 19
+//{
+//    string number;
+//    int sumOfDigits = 0;
+//    cout << "Enter three-digit number: ";
+//    cin >> number;
+//    for (int i = 0; i < number.length(); i++)
+//        {
+////          sumOfDigits += static_cast<int>(number[i]) - 48;
+//            sumOfDigits += (number[i] - '0');
+//        }
+//    cout << "Sum of digits is: " << sumOfDigits << endl;
+//    return 0;
+//}
+// Task 23
+//{
+//    int houses[10];
+//    int numberOfYourHouse;
+//    int flagForSuccess = 0;
+//    for (int i = 0; i < 10; i++)
+//    {
+//        cout << "Enter house number, please: ";
+//        cin >> houses[i];
+//    }
+//    cout << "Enter number of your house: ";
+//    cin >> numberOfYourHouse;
+//    for (int i = 0; i < 10; i++)
+//    {
+//        if (houses[i] == numberOfYourHouse)
+//            {
+//                cout << "I know that house number.";
+//                flagForSuccess++;
+//                break;
+//            }
+//    }
+//    if (flagForSuccess == 0)
+//        cout << "I don't know that house number.";
+//    return 0;
+//}
+// Task 24
+{
+    int cardsBalance [10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int cardNumber;
+    int incomingTranzactionSum;
+    int totalBalance = 0;
+    while (true)
+    {
+        cout << "Enter card number: ";
+        cin >> cardNumber;
+        while (cardNumber > 10 || cardNumber < 1)
+        {
+            cout << "Such card does not exist! Please enter correct number: ";
+            cin >> cardNumber;
+        }
+        cout << "How much money do you want to put?: ";
+        cin >> incomingTranzactionSum;
+        while (incomingTranzactionSum > 1000 || incomingTranzactionSum < -1000)
+        {
+            cout << "Recommended sum is between -1000 and 1000. Try again: ";
+            cin >> incomingTranzactionSum;
+        }
+        cardsBalance [cardNumber - 1] += incomingTranzactionSum;
+        for (int j = 0; j < 10; j++)
+        {
+            cout << cardsBalance[j] << " ";
+        }
+        cout << endl;
+        for (int i = 0; i < 10; i++)
+        {
+            totalBalance += cardsBalance[i];
+        }
+        cout << "Total balance on your cards is:" << totalBalance << endl;
+        totalBalance = 0;
+    }
+    return 0;
+
+}
+
