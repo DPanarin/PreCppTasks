@@ -3,6 +3,8 @@
 #include <string>
 using namespace std;
 
+int summOfNumberSeries (int, int);
+
 int main()
 //{
 //    cout << "hello world" << endl;
@@ -373,46 +375,76 @@ int main()
 //    return 0;
 //
 //}
+// Task 25
+//{
+//    int starsInRows [20];
+//    for (int i=0; i < 20; i++)
+//        starsInRows [i] = 0;
+//    int numberOfStarsInRow;
+//    cout << "Enter an odd number: ";
+//    cin >> numberOfStarsInRow;
+//    if (numberOfStarsInRow != 0)
+//    {
+//        int counter = 1;
+//        do
+//        {
+//            starsInRows [counter] = numberOfStarsInRow;
+//            cout << "Enter an odd number or enter '0' to stop: ";
+//            cin >> numberOfStarsInRow;
+//            counter++;
+//            if (numberOfStarsInRow == 0)
+//                break;
+//        }
+//        while (counter <= 20);
+//    }
+//    int maxStarsInRow = 0;
+//    for (int i = 1; i <= 20; i++)
+//    {
+//        if (starsInRows [i] > maxStarsInRow)
+//            maxStarsInRow = starsInRows [i];
+//    }
+//    for (int j = 1; j <= 20; j++)
+//    {
+//        if (starsInRows [j] == 0)
+//            break;
+//        int numberOfSpaces = (maxStarsInRow - starsInRows [j]) / 2;
+//        for (int i = 1; i <= numberOfSpaces; i++)
+//            cout << " ";
+//        for (int h = 1; h <= starsInRows [j]; h++)
+//            cout << "*";
+//        cout << endl;
+//    }
+//    return 0;
+//}
+// Task 29
 {
-    int starsInRows [20];
-    for (int i=0; i < 20; i++)
-        starsInRows [i] = 0;
-    int numberOfStarsInRow;
-    cout << "Enter an odd number: ";
-    cin >> numberOfStarsInRow;
-    if (numberOfStarsInRow != 0)
-    {
-        int counter = 1;
-        do
-        {
-            starsInRows [counter] = numberOfStarsInRow;
-            cout << "Enter an odd number or enter '0' to stop: ";
-            cin >> numberOfStarsInRow;
-            counter++;
-            if (numberOfStarsInRow == 0)
-                break;
-        }
-        while (counter <= 20);
-    }
-    int maxStarsInRow = 0;
-    for (int i = 1; i <= 20; i++)
-    {
-        if (starsInRows [i] > maxStarsInRow)
-            maxStarsInRow = starsInRows [i];
-    }
-    for (int j = 1; j <= 20; j++)
-    {
-        if (starsInRows [j] == 0)
-            break;
-        int numberOfSpaces = (maxStarsInRow - starsInRows [j]) / 2;
-        for (int i = 1; i <= numberOfSpaces; i++)
-            cout << " ";
-        for (int h = 1; h <= starsInRows [j]; h++)
-            cout << "*";
-        cout << endl;
-    }
+    int a, b;
+    cout << "Enter A number: ";
+    cin >> a;
+    cout << "Enter B number: ";
+    cin >> b;
+    cout << "Sum of numbers from A to B is: " << summOfNumberSeries(a, b);
     return 0;
 }
+int summOfNumberSeries (int a, int b)
+{
+    int sumOfNumbers = 0;
+    if (a > b)
+    {
+        for (int i = b; i <= a; i++)
+            sumOfNumbers += i;
+        return sumOfNumbers;
+    }
+    else
+    {
+        for (int j = a; j <= b; j++)
+            sumOfNumbers += j;
+        return sumOfNumbers;
+    }
+
+}
+
+
 
 
 
