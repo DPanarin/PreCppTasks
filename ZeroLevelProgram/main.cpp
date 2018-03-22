@@ -336,41 +336,83 @@ int main()
 //    return 0;
 //}
 // Task 24
+//{
+//    int cardsBalance [10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+//    int cardNumber;
+//    int incomingTranzactionSum;
+//    int totalBalance = 0;
+//    while (true)
+//    {
+//        cout << "Enter card number: ";
+//        cin >> cardNumber;
+//        while (cardNumber > 10 || cardNumber < 1)
+//        {
+//            cout << "Such card does not exist! Please enter correct number: ";
+//            cin >> cardNumber;
+//        }
+//        cout << "How much money do you want to put?: ";
+//        cin >> incomingTranzactionSum;
+//        while (incomingTranzactionSum > 1000 || incomingTranzactionSum < -1000)
+//        {
+//            cout << "Recommended sum is between -1000 and 1000. Try again: ";
+//            cin >> incomingTranzactionSum;
+//        }
+//        cardsBalance [cardNumber - 1] += incomingTranzactionSum;
+//        for (int j = 0; j < 10; j++)
+//        {
+//            cout << cardsBalance[j] << " ";
+//        }
+//        cout << endl;
+//        for (int i = 0; i < 10; i++)
+//        {
+//            totalBalance += cardsBalance[i];
+//        }
+//        cout << "Total balance on your cards is:" << totalBalance << endl;
+//        totalBalance = 0;
+//    }
+//    return 0;
+//
+//}
 {
-    int cardsBalance [10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cardNumber;
-    int incomingTranzactionSum;
-    int totalBalance = 0;
-    while (true)
+    int starsInRows [20];
+    for (int i=0; i < 20; i++)
+        starsInRows [i] = 0;
+    int numberOfStarsInRow;
+    cout << "Enter an odd number: ";
+    cin >> numberOfStarsInRow;
+    if (numberOfStarsInRow != 0)
     {
-        cout << "Enter card number: ";
-        cin >> cardNumber;
-        while (cardNumber > 10 || cardNumber < 1)
+        int counter = 1;
+        do
         {
-            cout << "Such card does not exist! Please enter correct number: ";
-            cin >> cardNumber;
+            starsInRows [counter] = numberOfStarsInRow;
+            cout << "Enter an odd number or enter '0' to stop: ";
+            cin >> numberOfStarsInRow;
+            counter++;
+            if (numberOfStarsInRow == 0)
+                break;
         }
-        cout << "How much money do you want to put?: ";
-        cin >> incomingTranzactionSum;
-        while (incomingTranzactionSum > 1000 || incomingTranzactionSum < -1000)
-        {
-            cout << "Recommended sum is between -1000 and 1000. Try again: ";
-            cin >> incomingTranzactionSum;
-        }
-        cardsBalance [cardNumber - 1] += incomingTranzactionSum;
-        for (int j = 0; j < 10; j++)
-        {
-            cout << cardsBalance[j] << " ";
-        }
+        while (counter <= 20);
+    }
+    int maxStarsInRow = 0;
+    for (int i = 1; i <= 20; i++)
+    {
+        if (starsInRows [i] > maxStarsInRow)
+            maxStarsInRow = starsInRows [i];
+    }
+    for (int j = 1; j <= 20; j++)
+    {
+        if (starsInRows [j] == 0)
+            break;
+        int numberOfSpaces = (maxStarsInRow - starsInRows [j]) / 2;
+        for (int i = 1; i <= numberOfSpaces; i++)
+            cout << " ";
+        for (int h = 1; h <= starsInRows [j]; h++)
+            cout << "*";
         cout << endl;
-        for (int i = 0; i < 10; i++)
-        {
-            totalBalance += cardsBalance[i];
-        }
-        cout << "Total balance on your cards is:" << totalBalance << endl;
-        totalBalance = 0;
     }
     return 0;
-
 }
+
+
 
