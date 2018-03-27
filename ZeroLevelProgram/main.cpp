@@ -4,6 +4,11 @@
 using namespace std;
 
 int summOfNumberSeries (int, int);
+int settingArraySize ();
+void arrayFilling (int [], int);
+void arrayPrinting(int [], int);
+void arrayReversing(int [], int);
+
 
 int main()
 //{
@@ -417,34 +422,74 @@ int main()
 //    return 0;
 //}
 // Task 29
+//{
+//    int a, b;
+//    cout << "Enter A number: ";
+//    cin >> a;
+//    cout << "Enter B number: ";
+//    cin >> b;
+//    cout << "Sum of numbers from A to B is: " << summOfNumberSeries(a, b);
+//    return 0;
+//}
+//
+//int summOfNumberSeries (int a, int b)
+//{
+//    int sumOfNumbers = 0;
+//    if (a > b)
+//    {
+//        for (int i = b; i <= a; i++)
+//            sumOfNumbers += i;
+//        return sumOfNumbers;
+//    }
+//    else
+//    {
+//        for (int j = a; j <= b; j++)
+//            sumOfNumbers += j;
+//        return sumOfNumbers;
+//    }
+//
+//}
+// Task 30
 {
-    int a, b;
-    cout << "Enter A number: ";
-    cin >> a;
-    cout << "Enter B number: ";
-    cin >> b;
-    cout << "Sum of numbers from A to B is: " << summOfNumberSeries(a, b);
+    int a = settingArraySize();
+    int m[a];
+    arrayFilling (m, a);
+    arrayPrinting(m, a);
+    arrayReversing(m, a);
+    cout << "Here is reversed array: " << endl;
+    arrayPrinting(m, a);
     return 0;
 }
-int summOfNumberSeries (int a, int b)
+int settingArraySize()
 {
-    int sumOfNumbers = 0;
-    if (a > b)
-    {
-        for (int i = b; i <= a; i++)
-            sumOfNumbers += i;
-        return sumOfNumbers;
-    }
-    else
-    {
-        for (int j = a; j <= b; j++)
-            sumOfNumbers += j;
-        return sumOfNumbers;
-    }
-
+    int sizeOfArray;
+    cout << "Enter size of array: ";
+    cin >> sizeOfArray;
+    return sizeOfArray;
 }
-
-
-
+void arrayFilling(int m[], int a)
+{
+    for (int i = 1; i <= a; i++)
+    {
+        cout << "Enter " << i << " element of massive: ";
+        cin >> m[i];
+    }
+}
+void arrayPrinting(int m[], int a)
+{
+     for (int j = 1; j <= a; j++)
+        cout << m [j] << " ";
+    cout << endl;
+}
+void arrayReversing(int m[], int a)
+{
+    for (int i = 1; i <= a/2; i++)
+    {
+        int temp = m[i];
+        m[i] = m[a-i+1];
+        m[a-i+1] = temp;
+        temp = 0;
+    }
+}
 
 
