@@ -8,7 +8,10 @@ int settingArraySize ();
 void arrayFilling (int [], int);
 void arrayPrinting(int [], int);
 void arrayReversing(int [], int);
-
+int wheelCounting (int, int);
+void analysisOfNumbers (int, int, int);
+int sumByCondition (int, int);
+void arraysProcessing (int [], int [], int);
 
 int main()
 //{
@@ -450,46 +453,147 @@ int main()
 //
 //}
 // Task 30
+//{
+//    int a = settingArraySize();
+//    int m[a];
+//    arrayFilling (m, a);
+//    arrayPrinting(m, a);
+//    arrayReversing(m, a);
+//    cout << "Here is reversed array: " << endl;
+//    arrayPrinting(m, a);
+//    return 0;
+//}
+//int settingArraySize()
+//{
+//    int sizeOfArray;
+//    cout << "Enter size of array: ";
+//    cin >> sizeOfArray;
+//    return sizeOfArray;
+//}
+//void arrayFilling(int m[], int a)
+//{
+//    for (int i = 1; i <= a; i++)
+//    {
+//        cout << "Enter " << i << " element of massive: ";
+//        cin >> m[i];
+//    }
+//}
+//void arrayPrinting(int m[], int a)
+//{
+//     for (int j = 1; j <= a; j++)
+//        cout << m [j] << " ";
+//    cout << endl;
+//}
+//void arrayReversing(int m[], int a)
+//{
+//    for (int i = 1; i <= a/2; i++)
+//    {
+//        int temp = m[i];
+//        m[i] = m[a-i+1];
+//        m[a-i+1] = temp;
+//        temp = 0;
+//    }
+//}
+// Solving examples of tasks from the description of exam
+// Task 1
+//{
+//    int bicycleScore = 0;
+//    int carScore = 0;
+//    cout << "Enter the number of bicycles: ";
+//    cin >> bicycleScore;
+//    cout << "Enter the number of cars: ";
+//    cin >> carScore;
+//    cout << "Total score of wheels is: " << wheelCounting (bicycleScore, carScore) << endlw
+//    ;
+//    return 0;
+//}
+//int wheelCounting (int bicycleScore, int carScore)
+//{
+//    int totalScore = bicycleScore*2 + carScore*4;
+//    return totalScore;
+//}
+// Task 2
+//{
+//    int number1;
+//    int number2;
+//    int number3;
+//    cout << "Enter first number: ";
+//    cin >> number1;
+//    cout << "Enter second number: ";
+//    cin >> number2;
+//    cout << "Enter third number: ";
+//    cin >> number3;
+//    analysisOfNumbers (number1, number2, number3);
+//    return 0;
+//}
+//void analysisOfNumbers (int number1, int number2, int number3)
+//{
+//    int sumOfNnumbers = number1 + number2 + number3;
+//    if (sumOfNnumbers > 0 && sumOfNnumbers < 100)
+//    {
+//        cout << "1 " << "Sum is between a range 0-100." << endl;
+//    }
+//    else
+//    {
+//        int maxNumber = 0;
+//        int m[3] = {number1, number2, number3};
+//        for (int i = 0; i < 3; i++)
+//        {
+//            if (m[i] > maxNumber)
+//            {
+//                maxNumber = m[i];
+//            }
+//        }
+//        cout << maxNumber << " Sum is not between a range 0-100. Max number has been printed previous." << endl;
+//    }
+//    if (number1 == number2 && number2 == number3)
+//        cout << "-1 " << "Numbers are equal.";
+//}
+// Task 3
+//{
+//    int number1;
+//    int number2;
+//    cout << "Enter first number: ";
+//    cin >> number1;
+//    cout << "Enter second number: ";
+//    cin >> number2;
+//    cout << sumByCondition (number1, number2);
+//    return 0;
+//}
+//int sumByCondition (int number1, int number2)
+//{
+//    int sumOfNumbers = 0;
+//    for (int i = number1; i <= number2; i++)
+//    {
+//        if (i%5 == 0 || i%number1 == 0 || i%number2 == 0)
+//            sumOfNumbers += i;
+//    }
+//    return sumOfNumbers;
+//}
+// Task 4
 {
-    int a = settingArraySize();
-    int m[a];
-    arrayFilling (m, a);
-    arrayPrinting(m, a);
-    arrayReversing(m, a);
-    cout << "Here is reversed array: " << endl;
-    arrayPrinting(m, a);
+    int length = 5;
+    int a[5] = {1, 2, 3, 4, 5};
+    int b[5] = {5, 4, 3, 2, 1};
+    arraysProcessing (a, b, length);
+    arrayPrinting(a, length);
+    arrayPrinting(b, length);
     return 0;
 }
-int settingArraySize()
+void arraysProcessing (int a[], int b[], int lenght)
 {
-    int sizeOfArray;
-    cout << "Enter size of array: ";
-    cin >> sizeOfArray;
-    return sizeOfArray;
-}
-void arrayFilling(int m[], int a)
-{
-    for (int i = 1; i <= a; i++)
-    {
-        cout << "Enter " << i << " element of massive: ";
-        cin >> m[i];
-    }
+    int tempArray[5] = {0, 0, 0 ,0 ,0};
+    for (int i = 0; i < lenght; i++)
+        tempArray[i] = a[i] + b[i];
+    for (int j = 0; j < lenght; j++)
+        a[j] = a[j] - b[j];
+    for (int k = 0; k < lenght; k++)
+        b[k] = tempArray[k];
 }
 void arrayPrinting(int m[], int a)
 {
-     for (int j = 1; j <= a; j++)
+     for (int j = 0; j < a; j++)
         cout << m [j] << " ";
     cout << endl;
 }
-void arrayReversing(int m[], int a)
-{
-    for (int i = 1; i <= a/2; i++)
-    {
-        int temp = m[i];
-        m[i] = m[a-i+1];
-        m[a-i+1] = temp;
-        temp = 0;
-    }
-}
-
 
